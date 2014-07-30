@@ -1,0 +1,34 @@
+{
+  "name": "nodemailer-html-to-text",
+  "version": "1.0.0",
+  "description": "Generate text content from html for Nodemailer e-mails",
+  "main": "src/nodemailer-html-to-text.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andris9/nodemailer-html-to-text.git"
+  },
+  "keywords": [
+    "Nodemailer"
+  ],
+  "author": "Andris Reinman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andris9/nodemailer-html-to-text/issues"
+  },
+  "homepage": "https://github.com/andris9/nodemailer-html-to-text",
+  "dependencies": {
+    "html-to-text": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-mocha-test": "~0.10.0"
+  }
+}
