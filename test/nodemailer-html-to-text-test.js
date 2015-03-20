@@ -4,7 +4,7 @@ var chai = require('chai');
 var htmlToText = require('../src/nodemailer-html-to-text').htmlToText;
 
 var expect = chai.expect;
-chai.Assertion.includeStack = true;
+chai.config.includeStack = true;
 
 describe('nodemailer-html-to-text tests', function() {
 
@@ -20,10 +20,10 @@ describe('nodemailer-html-to-text tests', function() {
         };
         plugin(mail, function(err) {
             expect(err).to.not.exist;
-            expect(mail.data).to.deep.equal({
-                html: '<p>Tere, tere</p><p>vana kere!</p>',
-                text: 'Tere, tere\n\nvana kere!'
-            });
+            console.log(JSON.stringify(mail.data.text));
+            expect(mail.data.text).to.equal(
+                'Tere, tere\n\nvana kere!'
+            );
             done();
         });
     });
