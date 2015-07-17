@@ -28,6 +28,46 @@ describe('nodemailer-html-to-text tests', function() {
         });
     });
 
+    it('should remove the inlined picture reference including the empty space behind a line break', function(done) {
+        var plugin = htmlToText();
+        var mail = {
+            data: {
+                html: '<p>Tere, tere</p><p><img src="cid:nodemailerLogo"/>vana kere!</p>'
+            },
+            resolveContent: function(obj, key, cb) {
+                cb(null, obj[key]);
+            }
+        };
+        plugin(mail, function(err) {
+            expect(err).to.not.exist;
+            console.log(JSON.stringify(mail.data.text));
+            expect(mail.data.text).to.equal(
+                'Tere, tere\n\nvana kere!'
+            );
+            done();
+        });
+    });
+
+    it('should remove the inlined picture reference and keep the empty space without line break', function(done) {
+        var plugin = htmlToText();
+        var mail = {
+            data: {
+                html: '<p>Tere,<img src="cid:nodemailerLogo"/> tere</p><p>vana kere!</p>'
+            },
+            resolveContent: function(obj, key, cb) {
+                cb(null, obj[key]);
+            }
+        };
+        plugin(mail, function(err) {
+            expect(err).to.not.exist;
+            console.log(JSON.stringify(mail.data.text));
+            expect(mail.data.text).to.equal(
+                'Tere, tere\n\nvana kere!'
+            );
+            done();
+        });
+    });
+
     it('should set text from html buffer', function(done) {
         var plugin = htmlToText();
         var mail = {
