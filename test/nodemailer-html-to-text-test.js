@@ -20,7 +20,6 @@ describe('nodemailer-html-to-text tests', function() {
         };
         plugin(mail, function(err) {
             expect(err).to.not.exist;
-            console.log(JSON.stringify(mail.data.text));
             expect(mail.data.text).to.equal(
                 'Tere, tere\n\nvana kere!'
             );
@@ -40,7 +39,6 @@ describe('nodemailer-html-to-text tests', function() {
         };
         plugin(mail, function(err) {
             expect(err).to.not.exist;
-            console.log(JSON.stringify(mail.data.text));
             expect(mail.data.text).to.equal(
                 'Tere, tere\n\nvana kere!'
             );
@@ -60,7 +58,6 @@ describe('nodemailer-html-to-text tests', function() {
         };
         plugin(mail, function(err) {
             expect(err).to.not.exist;
-            console.log(JSON.stringify(mail.data.text));
             expect(mail.data.text).to.equal(
                 'Tere, tere\n\nvana kere!'
             );
