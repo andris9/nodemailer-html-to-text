@@ -1,6 +1,6 @@
 {
   "name": "nodemailer-html-to-text",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Generate text content from html for Nodemailer e-mails",
   "main": "src/nodemailer-html-to-text.js",
   "directories": {
