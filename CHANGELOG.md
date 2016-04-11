@@ -1,3 +1,9 @@
+# CHANGELOG
+
+## v2.1.0 2016-04-11
+
+Upgraded node-html-text
+
 ## v1.0.2 2015-07-20
 
 Remove inlined picture references from the plain text (fintura)
