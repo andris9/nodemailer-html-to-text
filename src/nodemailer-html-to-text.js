@@ -1,12 +1,12 @@
 'use strict';
 
-var converter = require('html-to-text');
+const converter = require('html-to-text');
 
 module.exports.htmlToText = function(options) {
     options = options || {};
 
     return function(mail, done) {
-        var handler = new HTMLToText(options);
+        const handler = new HTMLToText(options);
         handler.process(mail, done);
     };
 };
