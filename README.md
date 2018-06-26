@@ -6,10 +6,14 @@ This plugin is meant as replacement for the `generateTextFromHTML` option that w
 
 ## Install
 
+Install from yarn
+
+    yarn add nodemailer-html-to-text
+
 Install from npm
 
     npm install nodemailer-html-to-text --save
-
+    
 ## Usage
 
 Load the `htmlToText` function
