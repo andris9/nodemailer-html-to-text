@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## next version
+Upgraded node-html-text to 7.1.1 - introduced changes in option handling, please check https://github.com/html-to-text/node-html-to-text for changes 
+Updated dev dependencies
+Deprecate Node versions < 10.23
+
 ## v2.2.0 2018-06-26
 
 Upgraded node-html-text to 4.0.0

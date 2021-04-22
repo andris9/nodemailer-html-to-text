@@ -69,7 +69,7 @@ describe('nodemailer-html-to-text tests', function() {
         var plugin = htmlToText();
         var mail = {
             data: {
-                html: new Buffer('<p>Tere, tere</p><p>vana kere!</p>')
+                html: Buffer.from('<p>Tere, tere</p><p>vana kere!</p>')
             },
             resolveContent: function(obj, key, cb) {
                 cb(null, obj[key]);
@@ -78,7 +78,7 @@ describe('nodemailer-html-to-text tests', function() {
         plugin(mail, function(err) {
             expect(err).to.not.exist;
             expect(mail.data).to.deep.equal({
-                html: new Buffer('<p>Tere, tere</p><p>vana kere!</p>'),
+                html: Buffer.from('<p>Tere, tere</p><p>vana kere!</p>'),
                 text: 'Tere, tere\n\nvana kere!'
             });
             done();
