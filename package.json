@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/andris9/nodemailer-html-to-text",
   "dependencies": {
-    "html-to-text": "^5.1.1"
+    "html-to-text": "^7.1.1"
   },
   "devDependencies": {
     "chai": "4.2.0",
@@ -33,6 +33,6 @@
     "mocha": "6.2.0"
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 10.23.0"
   }
 }

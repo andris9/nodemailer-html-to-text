@@ -30,7 +30,7 @@ HTMLToText.prototype.process = function(mail, done) {
             return done(err);
         }
         try {
-            mail.data.text = converter.fromString(html, this._options);
+            mail.data.text = converter.htmlToText(html, this._options);
             mail.data.text = mail.data.text.replace(/(\n)\[cid:.*?\] |\[cid:.*?\]/g, '$1');
         } catch (E) {
             return done(E);
